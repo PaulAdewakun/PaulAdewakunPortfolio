@@ -228,19 +228,19 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content: "Computer Engineer";
+        content: "Computer Engineering Student";
     }
     21%, 40%{
         content: "Developer";
     }
     41%, 60%{
-        content: "Computer Engineering Student";
+        content: "Front-end Developer";
     }
     61%, 80%{
         content: "PCB Designer";
     }
     81%, 100%{
-        content: "Aviation Enthusiast";
+        content: "ML Enthusiast";
     }
 }
 
