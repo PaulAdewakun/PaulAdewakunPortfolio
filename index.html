@@ -9,39 +9,96 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Paul</a>
+        <a href="#home" class="logo">Paul</a>
 
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#" class>Services</a>
-            <a href="#" class>Skills</a>
-            <a href="#" class>Education</a>
-            <a href="#" class>Experience</a>
-            <a href="#" class>Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="home">
+
+    <!-- Home Section -->
+    <section id="home" class="home">
         <div class="home-img">
             <img src="main1.jpg" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Paul</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>Hi, I'm Paul — a Computer Engineering student at the University of Alberta with a passion for building smart, efficient systems that solve real-world problems.
-
-I'm an aspiring automation and embedded systems engineer with experience in C++, C, Python, and machine learning. From designing semi-autonomous robotic vehicles to developing license plate recognition systems, I thrive on blending hardware and software to create innovative solutions. I'm currently expanding my skills in control systems and computer vision.
-
-Outside of engineering, I enjoy staying active through basketball and workingout, and I unwind by baking (yes, I make a mean banana bread). I’m always curious, always building, and always looking for the next challenge.
-</p>
+            <p>
+                Hi, I'm Paul — a Computer Engineering student at the University of Alberta with a passion for building smart, efficient systems that solve real-world problems.
+                <br><br>
+                I'm an aspiring automation and embedded systems engineer with experience in C++, C, Python, and machine learning. From designing semi-autonomous robotic vehicles to developing license plate recognition systems, I thrive on blending hardware and software to create innovative solutions. I'm currently expanding my skills in control systems and computer vision.
+                <br><br>
+                Outside of engineering, I enjoy staying active through basketball and working out, and I unwind by baking (yes, I make a mean banana bread). I’m always curious, always building, and always looking for the next challenge.
+            </p>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pauladewakun/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/PaulAdewakun" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/pauladewakun" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/pauladewakun/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <a href="mailto:adewakun@ualberta.ca" class="btn">Hire me</a>
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <p>Describe the services you offer here...</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>List your technical and soft skills here...</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>Include your academic background here...</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Include your work/project experiences here...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can include a contact form or just your email and phone number here.</p>
+    </section>
+
+    <!-- Scroll spy script for active underline -->
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150; // adjust offset for fixed header
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
